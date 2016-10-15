@@ -132,25 +132,25 @@ $(function(){
 
     //Map转化为JSON
     //Map的键名都是字符串，这时可以选择转为对象JSON。
-    function mapToJson(map){
-        return JSON.stringify(mapToJson(map));
-    }
-    mapToJson(new Map([['a',1],['b',2]]));
-    //Map的键名有非字符串，这时可以选择转为数组JSON。
-    function mapToArrayJSon(map){
-        return JSON.stringify([...map]);
-    }
-    mapToArrayJSon(new Map().set(true,7).set({a:1},['abc']));
-
-    //JSON转化为Map
-    function jsonToMap(jsonStr) {
-        return objToMap(JSON.parse(jsonStr));
-    }
-
-    //整个JSON就是一个数组，且每个数组成员本身，又是一个有两个成员的数组。这时，它可以一一对应地转为Map。这往往是数组转为JSON的逆操作。
-    function jsonArrayToMap(jsonStr) {
-        return new Map(JSON.parse(jsonStr));
-    }
+    //function mapToJson(map){
+    //    return JSON.stringify(mapToJson(map));
+    //}
+    //mapToJson(new Map([['a',1],['b',2]]));
+    ////Map的键名有非字符串，这时可以选择转为数组JSON。
+    //function mapToArrayJSon(map){
+    //    return JSON.stringify([...map]);
+    //}
+    //mapToArrayJSon(new Map().set(true,7).set({a:1},['abc']));
+    //
+    ////JSON转化为Map
+    //function jsonToMap(jsonStr) {
+    //    return objToMap(JSON.parse(jsonStr));
+    //}
+    //
+    ////整个JSON就是一个数组，且每个数组成员本身，又是一个有两个成员的数组。这时，它可以一一对应地转为Map。这往往是数组转为JSON的逆操作。
+    //function jsonArrayToMap(jsonStr) {
+    //    return new Map(JSON.parse(jsonStr));
+    //}
 
 
 
